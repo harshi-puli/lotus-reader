@@ -1,10 +1,10 @@
 # Lotus Hand Bloom
 
-A live MediaPipe webcam sketch that blooms a lotus from your hand.
+A live MediaPipe webcam sketch that blooms a lotus over your camera feed.
 
 ## What It Does
 
-This browser tool opens your webcam, tracks one hand with MediaPipe, and draws a glowing lotus that responds to your movement. The lotus appears when your hand is visible and fades away when your hand leaves the camera view.
+This browser tool opens your webcam, tracks one hand with MediaPipe, and draws a glowing lotus as a transparent overlay. The lotus appears when your hand is visible and fades away when your hand leaves the camera view.
 
 ## How To Run
 
@@ -45,3 +45,5 @@ Allow camera access when the browser asks. The app needs to run from `localhost`
 - The app runs entirely in the browser.
 - It loads MediaPipe Tasks Vision from a CDN, so an internet connection is needed the first time it loads.
 - If the camera does not start, check browser camera permissions and refresh the page.
+- `src/app.js` includes comments explaining the hand landmarks, gesture math, canvas drawing, and animation loop.
+- `physics/lotus_spring.cpp` is a small C++ reference showing how the lotus smoothing could be modeled like a spring for TouchDesigner-style realtime work.
