@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lotus Hand Bloom</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="stage" aria-label="MediaPipe lotus hand tool">
+      <video id="webcam" class="webcam" autoplay playsinline muted></video>
+      <canvas id="lotusCanvas" class="canvas"></canvas>
+
+      <section class="hud" aria-label="controls">
+        <div>
+          <p class="label">Hand Bloom</p>
+          <h1>Lotus</h1>
+        </div>
+
+        <div class="readout">
+          <span id="status">Loading hand tracker...</span>
+          <span id="gesture">Show your hand</span>
+        </div>
+
+        <div class="controls">
+          <label>
+            Petals
+            <input id="petalCount" type="range" min="8" max="28" value="18" />
+          </label>
+          <label>
+            Trails
+            <input id="trailAmount" type="range" min="0" max="95" value="68" />
+          </label>
+          <label>
+            Glow
+            <input id="glowAmount" type="range" min="0" max="100" value="72" />
+          </label>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>
